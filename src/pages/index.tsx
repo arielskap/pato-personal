@@ -27,14 +27,14 @@ ${watchAllFields.message}`)
 	const mailMessage = `mailto:${mailto}?subject=${subject}&body=${message}`
 
   return (
-    <div className="bg-custom min-h-screen flex items-center justify-center">
-      <div className="max-w-7xl mx-auto w-full sm:px-6 lg:px-8">
-        <div className="relative bg-white shadow-xl">
+    <div className="flex items-center justify-center min-h-screen bg-custom">
+      <div className="w-full mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="relative bg-white shadow-xl sm:rounded-lg">
           <h2 className="sr-only">Contact me</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3">
             {/* Contact information */}
-            <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
+            <div className="relative px-6 py-10 overflow-hidden bg-indigo-700 sm:rounded-lg sm:px-10 xl:p-12">
               <div className="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
                 <svg
                   className="absolute inset-0 w-full h-full"
@@ -66,7 +66,7 @@ ${watchAllFields.message}`)
                 </svg>
               </div>
               <div
-                className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none sm:block lg:hidden"
+                className="absolute top-0 bottom-0 right-0 hidden w-1/2 pointer-events-none sm:block lg:hidden"
                 aria-hidden="true"
               >
                 <svg
@@ -99,7 +99,7 @@ ${watchAllFields.message}`)
                 </svg>
               </div>
               <div
-                className="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block"
+                className="absolute top-0 bottom-0 right-0 hidden w-1/2 pointer-events-none lg:block"
                 aria-hidden="true"
               >
                 <svg
@@ -131,12 +131,12 @@ ${watchAllFields.message}`)
                   </defs>
                 </svg>
               </div>
-							<div className="w-52 mx-auto mb-6">
+							<div className="mx-auto mb-6 w-52">
 								<Image placeholder='blur' quality={100} className="rounded-full" src={info.image} alt={info.name} />
 							</div>
               <h1 className="text-lg font-medium text-white">{info.name}</h1>
 							{info.titles.map((title) => (
-								<h3 key={title} className="text-white text-sm">{title}</h3>
+								<h3 key={title} className="text-sm text-white">{title}</h3>
 							))}
               <dl className="mt-8 space-y-6">
                 <dt>
@@ -158,7 +158,7 @@ ${watchAllFields.message}`)
 									</a>
                 </dd>
               </dl>
-              <ul role="list" className="mt-8 flex space-x-12">
+              <ul role="list" className="flex mt-8 space-x-12">
                 <li>
                   <a className="text-indigo-200 hover:text-indigo-100" href={info.contact.facebook} target="_blank" rel="noreferrer">
                     <span className="sr-only">Facebook</span>
@@ -201,9 +201,9 @@ ${watchAllFields.message}`)
             </div>
 
             {/* Contact form */}
-            <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+            <div className="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
               <h3 className="text-lg font-medium text-gray-900">Send me a message 👋🏻</h3>
-              <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form action="#" method="POST" className="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">
                     First name
@@ -214,7 +214,7 @@ ${watchAllFields.message}`)
                       {...register("name", { required: true })}
                       id="first-name"
                       autoComplete="given-name"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                     />
                   </div>
                 </div>
@@ -228,7 +228,7 @@ ${watchAllFields.message}`)
 											{...register("lastName", { required: true })}
                       id="last-name"
                       autoComplete="family-name"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                     />
                   </div>
                 </div>
@@ -247,7 +247,7 @@ ${watchAllFields.message}`)
                       {...register("phone", { required: true })}
                       id="phone"
                       autoComplete="tel"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                       aria-describedby="phone-optional"
                     />
                   </div>
@@ -261,7 +261,7 @@ ${watchAllFields.message}`)
                       type="text"
                       {...register("subject", { required: true })}
                       id="subject"
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                      className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                     />
                   </div>
                 </div>
@@ -276,7 +276,7 @@ ${watchAllFields.message}`)
                       id="message"
                       {...register("message", { required: true })}
                       rows={4}
-                      className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                      className="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                       aria-describedby="message-max"
                       defaultValue={''}
                     />
