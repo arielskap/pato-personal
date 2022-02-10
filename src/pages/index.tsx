@@ -143,16 +143,18 @@ ${watchAllFields.message}`)
                   <span className="sr-only">Phone number</span>
                 </dt>
                 <dd>
-									<a className="flex text-base text-indigo-50" href={`tel:${info.contact.phone}`}>
-										<PhoneIcon className="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
-										<span className="ml-3">{info.contact.phone}</span>
+									<a className="flex items-center text-base text-indigo-50" href={`https://wa.me/${info.contact.phone}`} target="_blank" rel="noreferrer">
+										<PhoneIcon className="flex-shrink-0 w-8 h-8 p-1 text-indigo-200 border-2 border-indigo-200 rounded-full" aria-hidden="true" />
+										<div className="flex flex-col">
+											<span className="ml-3">{info.contact.phone}</span>
+										</div>
 									</a>
                 </dd>
                 <dt>
                   <span className="sr-only">Email</span>
                 </dt>
                 <dd>
-									<a className="flex text-base text-indigo-50" href={`mailto:${info.contact.email}`}>
+									<a className="flex items-center text-base text-indigo-50" href={`mailto:${info.contact.email}`}>
 										<MailIcon className="flex-shrink-0 w-6 h-6 text-indigo-200" aria-hidden="true" />
 										<span className="ml-3">{info.contact.email}</span>
 									</a>
