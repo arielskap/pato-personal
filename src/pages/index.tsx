@@ -131,12 +131,12 @@ ${watchAllFields.message}`)
                   </defs>
                 </svg>
               </div>
-							<div className="mx-auto mb-6 w-52">
-								<Image placeholder='blur' quality={100} className="rounded-full" src={info.image} alt={info.name} />
+							<div className="mx-auto mb-6 max-w-max">
+								<Image width='208' height="208" placeholder='blur' quality={100} className="rounded-full" src={info.image} alt={info.name} />
 							</div>
               <h1 className="text-lg font-medium text-white">{info.name}</h1>
 							{info.titles.map((title) => (
-								<h3 key={title} className="text-sm text-white">{title}</h3>
+								<h2 key={title} className="text-sm text-white">{title}</h2>
 							))}
               <dl className="mt-8 space-y-6">
                 <dt>
