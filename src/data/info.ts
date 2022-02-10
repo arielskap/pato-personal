@@ -1,6 +1,8 @@
+import profilePic from '../../public/me.jpeg'
+
 const info = {
 	name: "Lic. Patricia Viñas Ugarte",
-	image: "/face.jpeg",
+	image: profilePic,
 	titles: ["Psicoterapia", "Astrología", "Cursos/Talleres de Cocreacion y Astrología"],
 	country: "Argentina",
 	contact: {

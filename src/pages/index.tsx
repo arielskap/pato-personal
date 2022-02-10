@@ -2,6 +2,7 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import type { NextPage } from 'next'
 import info from "../data/info"
 import { useForm } from 'react-hook-form'
+import Image from 'next/image'
 
 interface FormProps {
 	name: string
@@ -130,7 +131,9 @@ ${watchAllFields.message}`)
                   </defs>
                 </svg>
               </div>
-							<img className="rounded-full w-52 mx-auto mb-6" src={info.image} alt={info.name} />
+							<div className="w-52 mx-auto mb-6">
+								<Image placeholder='blur' quality={100} className="rounded-full" src={info.image} alt={info.name} />
+							</div>
               <h1 className="text-lg font-medium text-white">{info.name}</h1>
 							{info.titles.map((title) => (
 								<h3 key={title} className="text-white text-sm">{title}</h3>
@@ -157,7 +160,7 @@ ${watchAllFields.message}`)
               </dl>
               <ul role="list" className="mt-8 flex space-x-12">
                 <li>
-                  <a className="text-indigo-200 hover:text-indigo-100" href={info.contact.facebook}>
+                  <a className="text-indigo-200 hover:text-indigo-100" href={info.contact.facebook} target="_blank" rel="noreferrer">
                     <span className="sr-only">Facebook</span>
                     <svg
                       width={24}
@@ -176,7 +179,7 @@ ${watchAllFields.message}`)
                   </a>
                 </li>
                 <li>
-                  <a className="text-indigo-200 hover:text-indigo-100" href={info.contact.instagram}>
+                  <a className="text-indigo-200 hover:text-indigo-100" href={info.contact.instagram} target="_blank" rel="noreferrer">
                     <span className="sr-only">Instagram</span>
 										<svg
 											width={24}
@@ -199,7 +202,7 @@ ${watchAllFields.message}`)
 
             {/* Contact form */}
             <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-lg font-medium text-gray-900">Send us a message</h3>
+              <h3 className="text-lg font-medium text-gray-900">Send me a message 👋🏻</h3>
               <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">

@@ -3,7 +3,7 @@ import type { DefaultSeoProps } from "next-seo";
 const SEO: DefaultSeoProps = {
 	defaultTitle: 'Patricia Viñas 🕉',
   titleTemplate: '%s | Patricia Viñas 🕉',
-	description: "",
+	description: "Lic. Patricia Viñas - Psicoterapia, Astrología, Cursos/Talleres de Cocreacion y Astrología",
 	additionalLinkTags: [{
     rel: 'icon',
     href: '/favicon-32x32.png',
