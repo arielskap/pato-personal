@@ -138,9 +138,13 @@ ${watchAllFields.message}`)
 							{info.titles.map((title) => (
 								<h2 key={title} className="text-sm text-white">{title}</h2>
 							))}
+							<h2 className="mt-2 font-medium text-white">Cursos y Talleres: </h2>
+							{info.courses.map((course) => (
+								<h2 key={course} className="text-sm text-white">{course}</h2>
+							))}
               <dl className="mt-8 space-y-6">
                 <dt>
-                  <span className="sr-only">Phone number</span>
+                  <span className="sr-only">Número de teléfono</span>
                 </dt>
                 <dd>
 									<a className="flex items-center text-base text-indigo-50" href={`https://wa.me/${info.contact.phone}`} target="_blank" rel="noreferrer">
@@ -204,11 +208,11 @@ ${watchAllFields.message}`)
 
             {/* Contact form */}
             <div className="px-6 py-10 sm:px-10 lg:col-span-2 xl:p-12">
-              <h3 className="text-lg font-medium text-gray-900">Send me a message 👋🏻</h3>
+              <h3 className="text-lg font-medium text-gray-900">Enviame un mensaje 👋🏻</h3>
               <form action="#" method="POST" className="grid grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium text-gray-900">
-                    First name
+                    Nombre
                   </label>
                   <div className="mt-1">
                     <input
@@ -222,7 +226,7 @@ ${watchAllFields.message}`)
                 </div>
                 <div>
                   <label htmlFor="last-name" className="block text-sm font-medium text-gray-900">
-                    Last name
+                    Apellido
                   </label>
                   <div className="mt-1">
                     <input
@@ -237,10 +241,10 @@ ${watchAllFields.message}`)
                 <div>
                   <div className="flex justify-between">
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-900">
-                      Phone
+                      Teléfono
                     </label>
                     <span id="phone-optional" className="text-sm text-gray-500">
-                      Optional
+                      Opcional
                     </span>
                   </div>
                   <div className="mt-1">
@@ -256,7 +260,7 @@ ${watchAllFields.message}`)
                 </div>
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-900">
-                    Subject
+                    Asunto
                   </label>
                   <div className="mt-1">
                     <input
@@ -270,7 +274,7 @@ ${watchAllFields.message}`)
                 <div className="sm:col-span-2">
                   <div className="flex justify-between">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-900">
-                      Message
+                      Mensaje
                     </label>
                   </div>
                   <div className="mt-1">
@@ -289,7 +293,7 @@ ${watchAllFields.message}`)
                     href={mailMessage}
                     className="inline-flex items-center justify-center w-full px-6 py-3 mt-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
                   >
-                    Submit
+                    Enviar
                   </a>
                 </div>
               </form>

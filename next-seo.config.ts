@@ -3,7 +3,7 @@ import type { DefaultSeoProps } from "next-seo";
 const SEO: DefaultSeoProps = {
 	defaultTitle: 'Patricia Viñas Ugarte 🕉',
   titleTemplate: '%s | Patricia Viñas Ugarte 🕉',
-	description: "Lic. Patricia Viñas Ugarte - Psicoterapia, Astrología, Cursos/Talleres de Cocreación y Autoconocimiento para la evolución, Coach y Acompañamiento en Astrología Humanistica",
+	description: "Lic. Patricia Viñas Ugarte - Psicoterapia, Astrología, Coaching. Cursos y Talleres de Co-Creación, Astrología Humanistica y Autoconocimiento Evolutivo.",
 	additionalLinkTags: [{
     rel: 'icon',
     href: '/favicon-32x32.png',
